@@ -151,7 +151,7 @@ func getFilesInfo(d *goquery.Document) []fileInfo {
 }
 
 func getFileAndPath(arg string) (file string, dir string) {
-	file = "*" + path.Base(arg) + "*"
+	file = path.Base(arg)
 	dir = path.Dir(arg)
 	if dir != "" && dir != "." {
 		dir = "*" + dir
